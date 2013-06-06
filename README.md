@@ -1,7 +1,6 @@
 <h2>Introduction</h2>
 
-Plugin implement [github] tag.<br/>
-You can use it in your page and post. 
+Plugin implement [github] tag.<br/> 
 
 <h2>Tag attributes</h2>
 
@@ -22,3 +21,5 @@ Regexp:
 <h2>Usage examples</h2>
 
 [github url="SebastianPozoga/JavaClassSelector/master/java/eu/pozoga/jspf/classes/ClassFilter.java" section="interface ClassFilter"]
+
+[github url="SebastianPozoga/NiceJava/master/src/main/java/eu/pozoga/nice/classes/ClassDesc.java" section="for (Method m : methods)"]
