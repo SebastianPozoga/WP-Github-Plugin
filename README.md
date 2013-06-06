@@ -1,8 +1,15 @@
-Plugin implement [github] tag.
+<h2>Introduction</h2>
+
+Plugin implement [github] tag.<br/>
 You can use it in your page and post. 
 
-Tag attributes:
+<h2>Tag attributes</h2>
 
-url	- your code url (for example: SebastianPozoga/WP-Github-Plugin/blob/master/errors/noUrl.js)
-baseurl	- (optional) use as base url (defaul: https://raw.github.com/)
-section	- (optional) text on begin (example: interface ClassFilter)
+url	- your code url (for example: SebastianPozoga/WP-Github-Plugin/blob/master/errors/noUrl.js)<br/>
+baseurl	- (optional) use as base url (defaul: https://raw.github.com/)<br/>
+section	- (optional) text on begin (example: interface ClassFilter)<br/>
+
+<h3>Section description</h3>
+
+$   - a world
+' ' - will be replacy with spaces or tabulator
