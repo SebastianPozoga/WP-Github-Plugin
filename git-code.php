@@ -18,38 +18,17 @@ wp_register_script('google-code-prettify-script', 'https://google-code-prettify.
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-/*
- *	Const
- */
-
+include 'CodeParser.php';
 
 /*
- *	Helpers
+ *	Shortcodes
  */
 
-function git_get($url){
-	return file_get_contents($url);
-}
-
-function git_get_section($code, $patter){
-	
-	return file_get_contents($url);
-}
-
-/*
- *	Function
- */
-
-//[git]
-function git_func( $atts ){
-	return "NO IMPLEMENT!!!";
-}
-add_shortcode( 'git', 'git_func' );
 
 
 //[github]
 $GIT_FUNC_ATTS = array(
-	'url'=>'SebastianPozoga/JavaClassSelector/master/java/eu/pozoga/jspf/classes/ClassFilter.java',
+	'url'=>'SebastianPozoga/WP-Github-Plugin/blob/master/errors/noUrl.js',
 	'baseurl' => "https://raw.github.com/";
 );
 
@@ -58,9 +37,16 @@ function github_func( $atts ){
 	global $GIT_INSERT_FUNC_ATTS;
 	$atts = shortcode_atts($GIT_INSERT_FUNC_ATTS, $atts);
 	$url = $atts['baseurl'].$atts['url'];
+	$section = $atts['section'];
 
 	//get code
-	$code = git_get($url);
+	$code = file_get_contents($url);
+
+	//parse code
+	if($section){
+		//
+	}else{
+	}
 	
 	//prepare color code
 	wp_enqueue_script('google-code-prettify-script');
@@ -70,4 +56,4 @@ function github_func( $atts ){
 	//create output
 	return '<pre class="prettyprint"><code class="'.$class.'">'.$code.'</code></pre>';
 }
-add_shortcode( 'gitInsert', 'github_func' );
+add_shortcode( 'github', 'github_func' );
