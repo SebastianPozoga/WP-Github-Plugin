@@ -20,6 +20,8 @@ Regexp:
 
 <h2>Usage examples</h2>
 
-[github url="SebastianPozoga/JavaClassSelector/master/java/eu/pozoga/jspf/classes/ClassFilter.java" section="interface ClassFilter"]
+[github url="SebastianPozoga/WP-Github-Plugin/blob/master/examples/ClassFilter.java"]
 
-[github url="SebastianPozoga/NiceJava/master/src/main/java/eu/pozoga/nice/classes/ClassDesc.java" section="for (Method m : methods)"]
+[github url="SebastianPozoga/WP-Github-Plugin/blob/master/examples/ClassFilter.java" section="interface ClassFilter"]
+
+[github url="SebastianPozoga/WP-Github-Plugin/blob/master/examples/ClassDesc.java" section="for (Method m : methods)"]
