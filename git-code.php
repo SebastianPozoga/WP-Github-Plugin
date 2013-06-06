@@ -46,26 +46,18 @@ function git_func( $atts ){
 }
 add_shortcode( 'git', 'git_func' );
 
-//[git-insert]
-$GIT_INSERT_FUNC_ATTS = array('url'=>'https://raw.github.com/SebastianPozoga/JavaClassSelector/master/java/eu/pozoga/jspf/classes/ClassFilter.java');
-
-function git_insert_func( $atts ){
-	global $GIT_INSERT_FUNC_ATTS;
-	$a = shortcode_atts($GIT_INSERT_FUNC_ATTS, $atts);
-	$code = git_get($a['url']);
-	wp_enqueue_script('google-code-prettify-script');
-	return '<pre class="prettyprint">'.$code.'</pre>';
-}
-add_shortcode( 'gitInsert', 'git_insert_func' );
 
 //[github]
-$GIT_FUNC_ATTS = array('url'=>'SebastianPozoga/JavaClassSelector/master/java/eu/pozoga/jspf/classes/ClassFilter.java');
+$GIT_FUNC_ATTS = array(
+	'url'=>'SebastianPozoga/JavaClassSelector/master/java/eu/pozoga/jspf/classes/ClassFilter.java',
+	'baseurl' => "https://raw.github.com/";
+);
 
 function github_func( $atts ){
 	//prepare variables
 	global $GIT_INSERT_FUNC_ATTS;
-	$a = shortcode_atts($GIT_INSERT_FUNC_ATTS, $atts);
-	$url = 'https://raw.github.com/'.$a['url'];
+	$atts = shortcode_atts($GIT_INSERT_FUNC_ATTS, $atts);
+	$url = $atts['baseurl'].$atts['url'];
 
 	//get code
 	$code = git_get($url);
