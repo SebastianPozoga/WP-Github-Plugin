@@ -11,5 +11,7 @@ section	- (optional) text on begin (example: interface ClassFilter)<br/>
 
 <h3>Section description</h3>
 
-$   - a world
-' ' - will be replacy with spaces or tabulator
+<ul>
+<li>$   - a world
+<li>' ' - will be replacy with spaces or tabulator
+</ul>
